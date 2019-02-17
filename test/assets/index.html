@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HW_13</title>
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+</head>
+<body>
+<div class="wrapper">
+    <div class="note">
+
+        <h1>Створи cвій новий список</h1>
+        <div>
+            <input class="tdIn" type="text" id="inputText" required>
+            <button class="enter"  id="enter" name="send">Enter</button>
+        </div>
+        <ul id="itemList"></ul>
+
+
+        <ul class="fafafe">
+            <li id="allitem">
+                <button type="submit">Все списки</button>
+            </li>
+            <li id="completeditem">
+                <button type="submit">Законченный список</button>
+            </li>
+            <li id="activeitem">
+                <button type="submit">Активный список</button>
+            </li>
+        </ul>
+        <button class="load" id="run-button">Загрузи больше</button>
+        <code id="result"></code>
+
+    </div>
+</div>
+<script src="js/todo.js"></script>
+
+</body>
+<script>
+    let runButton = document.getElementById('run-button')
+    let result = document.getElementById('result')
+    let k1 = 'https://jsonplaceholder.typicode.com/todos?userId=1'
+    runButton.onclick = function () {
+        fetch(k1)
+            .then(response => response.json())
+            .then(json => {
+                let str = JSON.stringify(json, null, '\t')
+                result.innerHTML = str.replace(/\n/g, '<br/>').replace(/\\n/g, ' ').replace(/\t/g, '&nbsp;&nbsp;')
+            })
+    }
+</script>
+
+</html>

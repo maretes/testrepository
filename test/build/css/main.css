@@ -1,0 +1,108 @@
+@charset "UTF-8";
+body {
+  background: #404040;
+  padding: 50px; }
+
+.wrapper {
+  margin: 0 auto;
+  max-width: 1170px;
+  width: 100%;
+  text-align: center; }
+  .wrapper ul {
+    padding: 0; }
+    .wrapper ul li {
+      list-style-type: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 20px 0; }
+      .wrapper ul li textarea {
+        border-radius: 5px;
+        background: none;
+        border: 1px solid #30202a;
+        outline: none;
+        padding: 0 50px 0 10px;
+        font-size: 14px;
+        font-weight: 700;
+        margin-left: 5px;
+        max-width: 200px;
+        min-width: 100px; }
+      .wrapper ul li button {
+        border-radius: 5px;
+        color: #7d7e7e;
+        border: 1px solid #333;
+        background: none;
+        font-weight: 700;
+        height: 25px;
+        margin: 0 5px; }
+      .wrapper ul li input {
+        transform: scale(1.4); }
+        .wrapper ul li input:before {
+          content: 'отметить сделанным';
+          /* margin: 20px; */
+          position: absolute;
+          right: -5px;
+          margin: -2px;
+          transform: scale(0.6); }
+  .wrapper button {
+    color: #7d7e7e; }
+    .wrapper button:hover {
+      background: #333333;
+      color: white;
+      cursor: pointer; }
+
+.fafafe li {
+  margin: 0 !important; }
+
+h1 {
+  color: #333333;
+  margin-left: 60px; }
+
+.note {
+  position: relative;
+  background: #fbed66;
+  width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 20px 18px 20px 7px black; }
+  .note:before {
+    content: '';
+    position: relative;
+    left: -244px;
+    top: 49px;
+    border-right: 155px solid #e1d55b;
+    border-top: 70px solid #404040;
+    box-shadow: 20px 20px 113px 0 #404040; }
+
+.tdIn {
+  border-radius: 5px;
+  background: none;
+  border: 1px solid #333;
+  outline: none;
+  padding: 0 50px 0 10px;
+  height: 27px;
+  width: 200px;
+  font-size: 14px;
+  font-weight: 700;
+  position: relative;
+  left: 25px; }
+
+.enter {
+  border-radius: 5px;
+  color: #7d7e7e;
+  border: 1px solid #333;
+  background: none;
+  font-weight: 700;
+  height: 29px;
+  position: relative;
+  right: 27px; }
+
+.load {
+  background: none;
+  border: 1px solid #333;
+  height: 25px;
+  border-radius: 3px;
+  width: 100%; }
+
+.hidden {
+  display: none !important; }
